@@ -17,6 +17,14 @@ const Board = ({squares, onClick, turn, winningSquares}) => {
       );
 
   return (
+    <>
+      <div className="wrapper">
+        <svg>
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            Tic-Tac-Toe
+          </text>
+        </svg>
+      </div>
     <div className='board'>
       <div className='row'>
         {createSquare([0,1,2])}
@@ -28,6 +36,7 @@ const Board = ({squares, onClick, turn, winningSquares}) => {
         {createSquare([6,7,8])}
       </div>
     </div>
+    </>
   )
 }
 

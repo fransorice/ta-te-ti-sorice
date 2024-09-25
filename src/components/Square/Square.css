@@ -9,12 +9,12 @@
 }
 
 .square--X {
-    background-color: #CD493A;
+    background-color: #ee840a;
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 }
 
 .square--O {
-    background-color: #4392F1;
+    background-color: #106fe4;
     border-radius: 50%;
 }
 
@@ -27,10 +27,13 @@
 }
 
 @keyframes x-winner-animation {
-    from {
+    0% {
         transform: rotate(0deg);   
     }
-    to {
+    30% {
+        transform: rotate(-100deg);
+    }
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -39,7 +42,13 @@
     0% {
         border-radius: 50%;   
     }
+    25% {
+        border-radius: 0%;
+    }
     50% {
+        border-radius: 50%;
+    }
+    75% {
         border-radius: 0%;
     }
     100% {

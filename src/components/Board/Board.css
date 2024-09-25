@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geo&display=swap");
+
 .board {
     display: flex;
     flex-direction: column;
@@ -5,4 +7,33 @@
 
 .row {
     display: flex;
+}
+
+svg {
+	font-family: "Geo", sans-serif;
+	width: 500px; height: 100px;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #0080a7;
+	font-size: 110px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(36,194,255,0); stroke: rgba(24,142,217,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(36,194,255,0); stroke: rgba(24,142,217,1); }
+	80%  {fill: rgba(36,194,255,0); stroke: rgba(24,142,217,1); stroke-width: 3; }
+	100% {
+		fill: rgba(36,194,255,1); stroke: rgba(24,142,217,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {
+    background-color: #00455A;
+    margin-bottom: 40px;
+
 }
