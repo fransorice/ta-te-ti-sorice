@@ -1,12 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Square from '../Square/Square';
+import './Board.css';
 
-const Board = ({square}) => {
+const Board = ({squares, onClick, turn, winningSquares}) => {
 
-    const createSquare = (values) => {
-        values.map((value) => {
-            <div>{value}</div>
-        })
-    };
+    const createSquare = values => (
+        values.map(value => (
+            <Square
+              winner={winningSquares.includes(value)}
+              turn={turn}
+              onClick={() => onClick(value)}
+              value={squares[value]}
+              key={`square_${value}`}
+            />
+        ))
+      );
 
   return (
     <div className='board'>
@@ -23,4 +31,4 @@ const Board = ({square}) => {
   )
 }
 
-export default Board
+export default Board;
